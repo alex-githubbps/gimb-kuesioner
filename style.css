@@ -1,0 +1,36 @@
+/* === Base Theme === */
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --primary: #0ea5e9;
+  --primary-2: #2563eb;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(135deg,#f8fafc,#ecfeff); color:var(--text)}
+.container{max-width:1080px;margin:0 auto;padding:1.25rem}
+header h1{font-size:clamp(1.4rem,2.5vw,2rem);margin:.25rem 0;background:linear-gradient(90deg,#0f172a, var(--primary));-webkit-background-clip:text;background-clip:text;color:transparent}
+header p{color:var(--muted);margin-top:.25rem}
+.toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+button{appearance:none;border:1px solid var(--border);background:var(--card);padding:.6rem .9rem;border-radius:12px;cursor:pointer;transition:.15s;font-weight:600}
+button.primary{background:linear-gradient(90deg, var(--primary), var(--primary-2)); color:#fff;border:none}
+button:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(2,132,199,.12)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:0 10px 30px rgba(2,132,199,.06);margin:1rem 0;overflow:hidden}
+.card h2{margin:0;padding:1rem 1.25rem;background:linear-gradient(90deg,#06b6d4,#3b82f6);color:#fff;font-size:1.05rem}
+.card .content{padding:1rem 1.25rem}
+label{display:block;font-size:.92rem;margin:.35rem 0 .25rem;color:#0f172a;font-weight:600}
+input[type=text], input[type=email], input[type=tel], input[type=date], input[type=number], textarea, select{
+  width:100%;padding:.65rem .75rem;border-radius:12px;border:1px solid var(--border);background:#fff;outline:none;
+}
+textarea{min-height:90px}
+.grid{display:grid;gap:.75rem}
+@media(min-width:720px){.grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}}
+.radio-row, .check-row{display:grid;gap:.5rem}
+.radio, .check{display:flex;align-items:center;gap:.5rem;padding:.6rem .75rem;border:1px solid var(--border);border-radius:12px;background:#fff}
+.footer{font-size:.8rem;color:#64748b;text-align:center;margin:1.5rem 0}
+details{border:1px solid var(--border);border-radius:14px;background:#fff}
+details summary{list-style:none;cursor:pointer;padding:1rem 1.1rem;font-weight:700;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+details[open] summary{background:#f8fafc}
+.hint{font-size:.85rem;color:#64748b}

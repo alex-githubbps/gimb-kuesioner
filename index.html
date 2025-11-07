@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuesioner UTS – Strategi Kewirausahaan Global (GIMB)</title>
+  <meta name="description" content="Kuesioner UTS – Strategi Kewirausahaan Global, Studi Kasus: LKP GIMB Foundation" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧾 KUESIONER UTS – STRATEGI KEWIRAUSAHAAN GLOBAL</h1>
+      <p>Studi Kasus: LKP GIMB Foundation</p>
+    </header>
+
+    <div class="toolbar">
+      <button id="btnDownload" class="primary">Unduh Jawaban (.json)</button>
+      <button id="btnPrint">Cetak / Simpan PDF</button>
+      <button id="btnReset">Reset Isian</button>
+      <span class="hint">Data otomatis tersimpan di perangkat (localStorage).</span>
+    </div>
+
+    <form id="form" class="grid">
+      <!-- A. Identitas Responden -->
+      <section class="card">
+        <h2>🅐 Identitas Responden</h2>
+        <div class="content grid grid-2">
+          <div>
+            <label>Nama Responden *</label>
+            <input name="nama" type="text" placeholder="Nama lengkap" required>
+          </div>
+          <div>
+            <label>Jabatan/Peran di GIMB</label>
+            <input name="jabatan" type="text" placeholder="Trainer / Admin / Manajer">
+          </div>
+          <div>
+            <label>Kontak (Email/WA) *</label>
+            <input name="kontak" type="text" placeholder="email@contoh.com / 08xxxx" required>
+          </div>
+          <div>
+            <label>Tanggal Pengisian *</label>
+            <input name="tanggal" type="date" required>
+          </div>
+          <div>
+            <label>Lama bekerja di lembaga ini</label>
+            <input name="lamaKerja" type="text" placeholder="Misal: 2 tahun 3 bulan">
+          </div>
+          <div>
+            <label>NIB (Nomor Induk Berusaha)</label>
+            <input name="nib" type="text" placeholder="Opsional">
+          </div>
+          <div>
+            <label>Tahun berdiri lembaga</label>
+            <input name="tahunBerdiri" type="number" placeholder="2010">
+          </div>
+          <div>
+            <label>Bentuk badan hukum *</label>
+            <select name="bentukBadan" required>
+              <option value="">Pilih</option>
+              <option>Yayasan</option>
+              <option>PT</option>
+              <option>CV</option>
+              <option>Perkumpulan</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- B. Profil Lembaga -->
+      <section class="card">
+        <h2>🅑 Profil Lembaga</h2>
+        <div class="content grid">
+          <div>
+            <label>Bidang pelatihan utama yang diselenggarakan *</label>
+            <input name="bidangUtama" type="text" placeholder="Kewirausahaan, Digital Marketing, TI" required>
+          </div>
+          <div>
+            <label>Segmentasi peserta utama</label>
+            <input name="segmentasi" type="text" placeholder="UMKM pemula, mahasiswa, pencari kerja, dll">
+          </div>
+          <div>
+            <label>Latar belakang berdirinya lembaga</label>
+            <textarea name="latar" placeholder="Ceritakan alasan, konteks, dan kebutuhan awal"></textarea>
+          </div>
+          <div>
+            <label>Visi & Misi lembaga</label>
+            <textarea name="visiMisi" placeholder="Tuliskan ringkas visi dan misi"></textarea>
+          </div>
+          <div>
+            <label>Target peserta utama</label>
+            <input name="targetPeserta" type="text" placeholder="Contoh: 1.000 peserta per tahun, 70% UMKM">
+          </div>
+          <div>
+            <label>Layanan utama (boleh pilih lebih dari satu)</label>
+            <div class="check-row grid grid-3">
+              <label class="check"><input type="checkbox" name="layanan" value="Pelatihan Kewirausahaan"> Pelatihan Kewirausahaan</label>
+              <label class="check"><input type="checkbox" name="layanan" value="Digital Marketing"> Digital Marketing</label>
+              <label class="check"><input type="checkbox" name="layanan" value="Coaching Bisnis"> Coaching Bisnis</label>
+              <label class="check"><input type="checkbox" name="layanan" value="Teknologi Informasi"> Teknologi Informasi</label>
+              <label class="check" style="grid-column:1/-1;"><input type="checkbox" name="layanan" value="Lainnya"> Lainnya &nbsp; <input name="layananLain" type="text" placeholder="Isi jika ada layanan lain" style="flex:1"></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C. BAB 3 – Latar Belakang Permasalahan -->
+      <section class="card">
+        <h2>🅒 BAB 3 – Latar Belakang Permasalahan · A. Operasional Pelatihan</h2>
+        <div class="content grid">
+          <label>Apa tantangan terbesar dalam menyusun materi atau kurikulum pelatihan?</label>
+          <textarea name="op_tantangan"></textarea>
+          <label>Apakah terdapat standar internal kualitas pelatihan dan penyampaian oleh instruktur? Jelaskan.</label>
+          <textarea name="op_standar"></textarea>
+
+          <label>Seberapa konsisten kualitas pelaksanaan pelatihan antar kelas atau antar instruktur?</label>
+          <div class="radio-row grid grid-4">
+            <label class="radio"><input type="radio" name="op_konsistensi" value="Sangat konsisten"> Sangat konsisten</label>
+            <label class="radio"><input type="radio" name="op_konsistensi" value="Cukup konsisten"> Cukup konsisten</label>
+            <label class="radio"><input type="radio" name="op_konsistensi" value="Kurang konsisten"> Kurang konsisten</label>
+            <label class="radio"><input type="radio" name="op_konsistensi" value="Tidak konsisten"> Tidak konsisten</label>
+          </div>
+
+          <label>Bagian mana dari proses pelatihan yang paling banyak menyerap waktu/biaya?</label>
+          <div class="radio-row grid grid-4">
+            <label class="radio"><input type="radio" name="op_biaya" value="Pembuatan konten"> Pembuatan konten</label>
+            <label class="radio"><input type="radio" name="op_biaya" value="Pengelolaan peserta"> Pengelolaan peserta</label>
+            <label class="radio"><input type="radio" name="op_biaya" value="Pelaksanaan pelatihan"> Pelaksanaan pelatihan</label>
+            <label class="radio"><input type="radio" name="op_biaya" value="Evaluasi hasil belajar"> Evaluasi hasil belajar</label>
+          </div>
+
+          <label>Apakah lembaga memiliki mekanisme evaluasi kualitas pengajaran? Jelaskan.</label>
+          <textarea name="op_eval"></textarea>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>B. Kualitas Hasil Pembelajaran</h2>
+        <div class="content grid">
+          <label>Apakah lembaga memiliki indikator untuk mengukur keberhasilan peserta setelah pelatihan? Jika ya, sebutkan.</label>
+          <textarea name="kh_indikator"></textarea>
+          <label>Apakah lembaga melakukan tindak lanjut kepada peserta setelah pelatihan (monitoring/mentoring)?</label>
+          <textarea name="kh_tindak"></textarea>
+
+          <label>Seberapa sering evaluasi hasil pembelajaran dilakukan?</label>
+          <div class="radio-row grid grid-4">
+            <label class="radio"><input type="radio" name="kh_frekuensi" value="Setiap sesi"> Setiap sesi</label>
+            <label class="radio"><input type="radio" name="kh_frekuensi" value="Setiap program selesai"> Setiap program selesai</label>
+            <label class="radio"><input type="radio" name="kh_frekuensi" value="Setiap bulan"> Setiap bulan</label>
+            <label class="radio"><input type="radio" name="kh_frekuensi" value="Tidak rutin"> Tidak rutin</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>C. Model Bisnis dan Keberlanjutan</h2>
+        <div class="content grid">
+          <label>Berapa persen pendapatan lembaga yang bergantung pada Program Kartu Prakerja?</label>
+          <div class="radio-row grid grid-4">
+            <label class="radio"><input type="radio" name="mb_prakerja" value="<25%"> &lt;25%</label>
+            <label class="radio"><input type="radio" name="mb_prakerja" value="25–50%"> 25–50%</label>
+            <label class="radio"><input type="radio" name="mb_prakerja" value="51–75%"> 51–75%</label>
+            <label class="radio"><input type="radio" name="mb_prakerja" value=">75%"> &gt;75%</label>
+          </div>
+
+          <label>Apakah ada sumber pendapatan pelatihan lain di luar Prakerja? Sebutkan.</label>
+          <textarea name="mb_sumber"></textarea>
+          <label>Apakah lembaga mengalami fluktuasi pendapatan? Faktor apa yang paling memengaruhinya?</label>
+          <textarea name="mb_fluktuasi"></textarea>
+          <label>Strategi apa yang dilakukan lembaga untuk menjaga keberlanjutan bisnis pelatihan?</label>
+          <textarea name="mb_strategi"></textarea>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>D. Pemasaran dan Perluasan Akses</h2>
+        <div class="content grid">
+          <label>Strategi pemasaran apa yang digunakan lembaga saat ini?</label>
+          <textarea name="pm_strategi"></textarea>
+
+          <label>Apakah lembaga sudah mulai memasarkan pelatihan ke peserta di luar ekosistem Prakerja?</label>
+          <div class="radio-row grid grid-2">
+            <label class="radio"><input type="radio" name="pm_luar" value="Sudah"> Sudah</label>
+            <label class="radio"><input type="radio" name="pm_luar" value="Belum"> Belum (sebutkan kendalanya)</label>
+          </div>
+          <input name="pm_kendala" type="text" placeholder="Kendala utama (isi jika pilih Belum)">
+
+          <label>Apakah lembaga sudah memiliki brand positioning yang jelas?</label>
+          <div class="radio-row grid grid-2">
+            <label class="radio"><input type="radio" name="pm_brand" value="Ya"> Ya</label>
+            <label class="radio"><input type="radio" name="pm_brand" value="Belum"> Belum</label>
+          </div>
+          <input name="pm_brand_desc" type="text" placeholder="Jelaskan brand positioning (jika Ya)">
+        </div>
+      </section>
+
+      <!-- D. Analisis Bisnis Global -->
+      <section class="card">
+        <h2>🅓 Analisis Bisnis Global · E. SWOT</h2>
+        <div class="content grid grid-2">
+          <div>
+            <label>Kekuatan (Strength)</label>
+            <textarea name="swot_s"></textarea>
+          </div>
+          <div>
+            <label>Kelemahan (Weakness)</label>
+            <textarea name="swot_w"></textarea>
+          </div>
+          <div>
+            <label>Peluang (Opportunity)</label>
+            <textarea name="swot_o"></textarea>
+          </div>
+          <div>
+            <label>Ancaman (Threat)</label>
+            <textarea name="swot_t"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>F. Porter’s Five Forces</h2>
+        <div class="content grid">
+          <label>Tingkat persaingan antar lembaga pelatihan sejenis</label>
+          <div class="radio-row grid grid-4">
+            <label class="radio"><input type="radio" name="p5_persaingan" value="Sangat ketat"> Sangat ketat</label>
+            <label class="radio"><input type="radio" name="p5_persaingan" value="Cukup ketat"> Cukup ketat</label>
+            <label class="radio"><input type="radio" name="p5_persaingan" value="Sedang"> Sedang</label>
+            <label class="radio"><input type="radio" name="p5_persaingan" value="Rendah"> Rendah</label>
+          </div>
+
+          <label>Daya tawar peserta (buyers)</label>
+          <div class="radio-row grid grid-4">
+            <label class="radio"><input type="radio" name="p5_buyer" value="Sangat tinggi"> Sangat tinggi</label>
+            <label class="radio"><input type="radio" name="p5_buyer" value="Tinggi"> Tinggi</label>
+            <label class="radio"><input type="radio" name="p5_buyer" value="Sedang"> Sedang</label>
+            <label class="radio"><input type="radio" name="p5_buyer" value="Rendah"> Rendah</label>
+          </div>
+
+          <label>Apakah ada ancaman produk substitusi (mis. pelatihan daring gratis)?</label>
+          <textarea name="p5_substitusi"></textarea>
+          <label>Siapa pesaing utama GIMB dan apa perbedaannya?</label>
+          <textarea name="p5_pesaing"></textarea>
+          <label>Bagaimana hubungan dengan supplier (trainer, mentor, platform)?</label>
+          <textarea name="p5_supplier"></textarea>
+        </div>
+      </section>
+
+      <!-- G. Six Domains -->
+      <section class="card">
+        <h2>🅖 Six Domains of International Business</h2>
+        <div class="content grid grid-2">
+          <div>
+            <label>Lingkungan Pasar Internasional – Kesiapan ekspansi</label>
+            <textarea name="six_pasar"></textarea>
+          </div>
+          <div>
+            <label>Strategi Bisnis Global – Rencana internasionalisasi tertulis?</label>
+            <textarea name="six_strategi"></textarea>
+          </div>
+          <div>
+            <label>SDM Global – Kompetensi global (sertifikasi, bahasa asing)</label>
+            <textarea name="six_sdm"></textarea>
+          </div>
+          <div>
+            <label>Operasional/Produksi – Kesiapan platform & sistem untuk pasar luar negeri</label>
+            <textarea name="six_ops"></textarea>
+          </div>
+          <div>
+            <label>Keuangan & Investasi – Ketersediaan dana ekspansi global</label>
+            <textarea name="six_fin"></textarea>
+          </div>
+          <div>
+            <label>Manajemen & Kepemimpinan – Dukungan pimpinan untuk inovasi & globalisasi</label>
+            <textarea name="six_mgmt"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- H. Inovasi -->
+      <section class="card">
+        <h2>🅗 Strategi Kreatif & Inovatif</h2>
+        <div class="content grid">
+          <label>Inovasi digital yang telah dilakukan (e-learning, webinar, coaching online, sistem langganan)</label>
+          <textarea name="inv_dilakukan"></textarea>
+          <label>Rencana inovasi baru dalam 1–2 tahun ke depan</label>
+          <textarea name="inv_rencana"></textarea>
+          <label>Dukungan paling dibutuhkan untuk memperkuat inovasi digital</label>
+          <textarea name="inv_dukungan"></textarea>
+          <label>Bagaimana lembaga mengukur dampak sosial & ekonomi dari inovasi pelatihan?</label>
+          <textarea name="inv_dampak"></textarea>
+        </div>
+      </section>
+    </form>
+
+    <div class="footer">
+      © <span id="year"></span> – Kuesioner UTS Strategi Kewirausahaan Global · LKP GIMB Foundation
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
